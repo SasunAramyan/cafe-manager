@@ -14,7 +14,7 @@ public interface UserRepository extends JpaRepository<UserEntity, Long>, JpaSpec
 
     Optional<UserEntity> findByIdAndDeletedIsFalse(Long id);
 
-    Optional<UserEntity> findByIdAndRoles_NameAndDeletedIsFalse(Long id,String roleName);
+    Optional<UserEntity> findByIdAndRoles_NameAndDeletedIsFalse(Long id, String roleName);
 
     boolean existsByPhoneNumberAndDeletedIsFalse(String phoneNumber);
 

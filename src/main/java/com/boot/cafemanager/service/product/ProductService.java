@@ -7,10 +7,10 @@ import java.util.List;
 
 public interface ProductService {
 
-  ProductDTO create(ProductCreateDTO createDTO);
+    ProductDTO create(ProductCreateDTO createDTO);
 
-  ProductDTO getById(Long id);
+    ProductDTO getById(Long id);
 
-  List<ProductDTO> getAll();
+    List<ProductDTO> getAll();
 
 }

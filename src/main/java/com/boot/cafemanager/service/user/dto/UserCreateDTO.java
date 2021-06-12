@@ -1,77 +1,88 @@
 package com.boot.cafemanager.service.user.dto;
 
 import com.boot.cafemanager.types.enums.Gender;
+
 import java.util.List;
 
 public class UserCreateDTO {
 
-  private String username;
+    private String username;
 
-  private String phoneNumber;
+    private String phoneNumber;
 
-  private String firstName;
+    private String firstName;
 
-  private String lastName;
+    private String lastName;
 
-  private Gender gender;
+    private Gender gender;
 
-  private String email;
+    private String email;
 
-  private List<Long> roleIds;
+    private Long age;
 
-  public String getUsername() {
-    return username;
-  }
+    private List<Long> roleIds;
 
-  public void setUsername(String username) {
-    this.username = username;
-  }
+    public String getUsername() {
+        return username;
+    }
 
-  public String getPhoneNumber() {
-    return phoneNumber;
-  }
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
-  public void setPhoneNumber(String phoneNumber) {
-    this.phoneNumber = phoneNumber;
-  }
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
 
-  public String getFirstName() {
-    return firstName;
-  }
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
 
-  public void setFirstName(String firstName) {
-    this.firstName = firstName;
-  }
+    public String getFirstName() {
+        return firstName;
+    }
 
-  public String getLastName() {
-    return lastName;
-  }
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
 
-  public void setLastName(String lastName) {
-    this.lastName = lastName;
-  }
+    public String getLastName() {
+        return lastName;
+    }
 
-  public Gender getGender() {
-    return gender;
-  }
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 
-  public void setGender(Gender gender) {
-    this.gender = gender;
-  }
+    public Gender getGender() {
+        return gender;
+    }
 
-  public String getEmail() {
-    return email;
-  }
+    public void setGender(Gender gender) {
+        this.gender = gender;
+    }
 
-  public void setEmail(String email) {
-    this.email = email;
-  }
+    public String getEmail() {
+        return email;
+    }
 
-  public List<Long> getRoleIds() {
-    return roleIds;
-  }
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
-  public void setRoleIds(List<Long> roleIds) {
-    this.roleIds = roleIds;
-  }
+    public Long getAge() {
+        return age;
+    }
+
+    public void setAge(Long age) {
+        this.age = age;
+    }
+
+    public List<Long> getRoleIds() {
+        return roleIds;
+    }
+
+    public void setRoleIds(List<Long> roleIds) {
+        this.roleIds = roleIds;
+    }
 }

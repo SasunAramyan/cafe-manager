@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -30,7 +31,7 @@ public class OrderController {
     }
 
     @PostMapping
-    public ResponseEntity<OrderModel> create(@RequestBody OrderCreateModel orderCreateModel) {
+    public ResponseEntity<OrderModel> create(@RequestBody @Valid OrderCreateModel orderCreateModel) {
         OrderCreateDTO orderCreateDTO = orderMapper.toDTO(orderCreateModel);
         OrderDTO orderDTO = orderService.createOrEdit(orderCreateDTO);
         OrderModel orderModel = orderMapper.toModel(orderDTO);

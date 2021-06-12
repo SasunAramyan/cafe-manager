@@ -1,9 +1,13 @@
 package com.boot.cafemanager.web.rest.model.product;
 
+import javax.validation.constraints.NotNull;
+
 public class ProductInOrderCreateModel {
 
+    @NotNull
     private Long productId;
 
+    @NotNull
     private Long count;
 
     public Long getProductId() {

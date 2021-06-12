@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -32,7 +33,7 @@ public class TableController {
     }
 
     @PostMapping("/tables")
-    public ResponseEntity<TableModel> create(@RequestBody TableCreateModel tableCreateModel) {
+    public ResponseEntity<TableModel> create(@RequestBody @Valid TableCreateModel tableCreateModel) {
         TableCreateDTO tableCreateDTO = tableMapper.toDTO(tableCreateModel);
         TableDTO tableDTO = tableService.create(tableCreateDTO);
         TableModel tableModel = tableMapper.toModel(tableDTO);

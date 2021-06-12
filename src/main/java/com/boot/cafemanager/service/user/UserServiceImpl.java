@@ -75,6 +75,7 @@ public class UserServiceImpl implements UserService {
         userEntity.setFirstName(createDTO.getFirstName());
         userEntity.setLastName(createDTO.getLastName());
         userEntity.setPhoneNumber(createDTO.getPhoneNumber());
+        userEntity.setAge(createDTO.getAge());
         setRoles(userEntity, createDTO.getRoleIds());
     }
 

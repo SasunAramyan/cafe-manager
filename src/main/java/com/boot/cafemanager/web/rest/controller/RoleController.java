@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -31,7 +32,7 @@ public class RoleController {
     }
 
     @PostMapping
-    public ResponseEntity<RoleModel> create(@RequestBody RoleCreateModel roleCreateModel) {
+    public ResponseEntity<RoleModel> create(@RequestBody @Valid RoleCreateModel roleCreateModel) {
         RoleCreateDTO roleCreateDTO = roleMapper.toDTO(roleCreateModel);
         RoleDTO roleDTO = roleService.create(roleCreateDTO);
         RoleModel roleModel = roleMapper.toModel(roleDTO);

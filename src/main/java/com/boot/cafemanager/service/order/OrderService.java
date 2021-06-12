@@ -3,8 +3,6 @@ package com.boot.cafemanager.service.order;
 import com.boot.cafemanager.service.order.dto.OrderCreateDTO;
 import com.boot.cafemanager.service.order.dto.OrderDTO;
 import com.boot.cafemanager.service.order.dto.OrderEditDTO;
-import com.boot.cafemanager.service.product.dto.ProductCreateDTO;
-import com.boot.cafemanager.service.product.dto.ProductDTO;
 
 import java.util.List;
 

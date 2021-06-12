@@ -1,7 +1,5 @@
 package com.boot.cafemanager.web.rest.model.product;
 
-import com.boot.cafemanager.service.product.dto.ProductDTO;
-
 public class ProductInOrderModel {
 
     private Long id;

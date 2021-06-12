@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -32,7 +33,7 @@ public class UserController {
     }
 
     @PostMapping
-    public ResponseEntity<UserModel> create(@RequestBody UserCreateModel userCreateModel) {
+    public ResponseEntity<UserModel> create(@RequestBody @Valid UserCreateModel userCreateModel) {
         UserCreateDTO userCreateDTO = userMapper.toDTO(userCreateModel);
         UserDTO userDTO = userService.create(userCreateDTO);
         UserModel userModel = userMapper.toModel(userDTO);

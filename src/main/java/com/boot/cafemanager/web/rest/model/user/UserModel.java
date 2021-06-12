@@ -7,83 +7,93 @@ import java.util.List;
 
 public class UserModel {
 
-  private Long id;
+    private Long id;
 
-  private String username;
+    private String username;
 
-  private String phoneNumber;
+    private String phoneNumber;
 
-  private String firstName;
+    private String firstName;
 
-  private String lastName;
+    private String lastName;
 
-  private Gender gender;
+    private Gender gender;
 
-  private String email;
+    private String email;
 
-  private List<RoleModel> roles;
+    private Long age;
 
-  public Long getId() {
-    return id;
-  }
+    private List<RoleModel> roles;
 
-  public void setId(Long id) {
-    this.id = id;
-  }
+    public Long getId() {
+        return id;
+    }
 
-  public String getUsername() {
-    return username;
-  }
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-  public void setUsername(String username) {
-    this.username = username;
-  }
+    public String getUsername() {
+        return username;
+    }
 
-  public String getPhoneNumber() {
-    return phoneNumber;
-  }
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
-  public void setPhoneNumber(String phoneNumber) {
-    this.phoneNumber = phoneNumber;
-  }
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
 
-  public String getFirstName() {
-    return firstName;
-  }
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
 
-  public void setFirstName(String firstName) {
-    this.firstName = firstName;
-  }
+    public String getFirstName() {
+        return firstName;
+    }
 
-  public String getLastName() {
-    return lastName;
-  }
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
 
-  public void setLastName(String lastName) {
-    this.lastName = lastName;
-  }
+    public String getLastName() {
+        return lastName;
+    }
 
-  public Gender getGender() {
-    return gender;
-  }
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 
-  public void setGender(Gender gender) {
-    this.gender = gender;
-  }
+    public Gender getGender() {
+        return gender;
+    }
 
-  public String getEmail() {
-    return email;
-  }
+    public void setGender(Gender gender) {
+        this.gender = gender;
+    }
 
-  public void setEmail(String email) {
-    this.email = email;
-  }
+    public String getEmail() {
+        return email;
+    }
 
-  public List<RoleModel> getRoles() {
-    return roles;
-  }
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
-  public void setRoles(List<RoleModel> roles) {
-    this.roles = roles;
-  }
+    public Long getAge() {
+        return age;
+    }
+
+    public void setAge(Long age) {
+        this.age = age;
+    }
+
+    public List<RoleModel> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(List<RoleModel> roles) {
+        this.roles = roles;
+    }
 }

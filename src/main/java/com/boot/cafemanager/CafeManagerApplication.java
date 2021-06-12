@@ -8,8 +8,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EnableJpaRepositories(basePackages = "com.boot.cafemanager.data.jpa.repository")
 public class CafeManagerApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(CafeManagerApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(CafeManagerApplication.class, args);
+    }
 
 }

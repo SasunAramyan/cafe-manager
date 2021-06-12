@@ -1,46 +1,69 @@
 package com.boot.cafemanager.data.jpa.entity;
 
+import com.boot.cafemanager.types.enums.OrderType;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import java.util.List;
 
-@Table(name = "order")
+@Table(name = "`order`")
 @Entity
 public class OrderEntity {
 
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
 
-  @ManyToMany
-  @JoinTable(
-      name = "productInOrder",
-      joinColumns = @JoinColumn(name = "orderId"),
-      inverseJoinColumns = @JoinColumn(name = "productId"))
-  private List<ProductEntity> products;
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinColumn(name = "orderId", nullable = false)
+    private List<ProductInOrderEntity> productInOrders;
 
+    @Column(nullable = false)
+    private OrderType status;
 
-  public Long getId() {
-    return id;
-  }
+    @OneToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "tableId")
+    private TableEntity table;
 
-  public void setId(Long id) {
-    this.id = id;
-  }
+    public Long getId() {
+        return id;
+    }
 
-  public List<ProductEntity> getProducts() {
-    return products;
-  }
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-  public void setProducts(List<ProductEntity> products) {
-    this.products = products;
-  }
+    public List<ProductInOrderEntity> getProductInOrders() {
+        return productInOrders;
+    }
 
+    public void setProductInOrders(List<ProductInOrderEntity> productInOrders) {
+        this.productInOrders = productInOrders;
+    }
+
+    public OrderType getStatus() {
+        return status;
+    }
+
+    public void setStatus(OrderType status) {
+        this.status = status;
+    }
+
+    public TableEntity getTable() {
+        return table;
+    }
+
+    public void setTable(TableEntity table) {
+        this.table = table;
+    }
 }

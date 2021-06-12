@@ -11,7 +11,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-@Table(name = "table")
+@Table(name = "`table`")
 @Entity
 public class TableEntity {
 
@@ -25,6 +25,8 @@ public class TableEntity {
   @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "userId")
   private UserEntity waiter;
+
+  private boolean deleted;
 
   public Long getId() {
     return id;
@@ -48,5 +50,13 @@ public class TableEntity {
 
   public void setWaiter(UserEntity waiter) {
     this.waiter = waiter;
+  }
+
+  public boolean isDeleted() {
+    return deleted;
+  }
+
+  public void setDeleted(boolean deleted) {
+    this.deleted = deleted;
   }
 }
